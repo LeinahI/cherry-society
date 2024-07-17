@@ -1,17 +1,26 @@
 import React from 'react';
 import Image from "next/image";
 import Logo from "@/public/assets/images/Illustrator/cherry_soc.png";
+import Image1 from "@/public/assets/images/Photoshop/aboutus_1.jpg";
+import Image2 from "@/public/assets/images/Photoshop/aboutus_2.jpg";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
 
 function About() {
     return (
-        <section className='grid grid-cols-12 mt-20'>
-            <div className="2xs:col-span-12 md:col-span-6 2xs:mt-10 xl:mt-20">
+        <section className='grid grid-cols-12 mt-0'>
+            <div className="2xs:order-2 lg:order-1 2xs:col-span-12 lg:col-span-6 2xs:mt-10 xl:mt-20">
                 <div
                     className="text-primary 2xs:mx-10 sm:mx-8"
                 >
-                    <div className='flex'>
-                        <span className='self-center font-funkhouse text-stroke-[2px] text-stroke-[#fff] font-bold 2xs:text-3xl sm:text-5xl md:text-3xl lg:text-5xl xl:text-6xl'>About</span>
-                        <Image className={`ml-5 h-36 w-auto inline`} alt="Cherry Society Logo" src={Logo} />
+                    <div className="2xs:text-center xl:text-start xl:flex">
+                        <span className='xl:self-center font-funkhouse text-stroke-[2px] text-stroke-[#fff] font-bold 2xs:text-3xl sm:text-5xl md:text-3xl lg:text-5xl xl:text-6xl'>About</span>
+                        <Image className={`ml-5 h-36 w-auto 2xs:block xs:mx-auto xl:inline xl:ml-5`} alt="Cherry Society Logo" src={Logo} />
                     </div>
 
                     <div className="mt-5 grid grid-cols-12 gap-5 text-2xl">
@@ -27,42 +36,34 @@ function About() {
                     </div>
                 </div>
             </div>
-            {/*  <div className="2xs:col-span-12 md:col-span-6 2xs:mt-10 xl:mt-20">
-                <div
-                    className="text-primary 2xs:mx-10 sm:mx-8"
+            <div className="2xs:order-1 lg:order-2 2xs:col-span-12 lg:col-span-6 2xs:mt-10 xl:mt-20">
+                <Swiper
+                    slidesPerView={1}
+                    loop={true}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
+                    modules={[Autoplay]}
+                    onSlideChange={() => console.log('slide change')}
+                    onSwiper={(swiper) => console.log(swiper)}
+                    className="
+                    2xs:h-[250px] 2xs:w-[250px] 
+                    xs:h-[350px] xs:w-[350px]
+                    sm:h-[450px] sm:w-[450px]
+                    md:h-[550px] md:w-[550px]
+                    lg:h-[450px] lg:w-[450px]
+                    xl:h-[600px] xl:w-[600px]
+                    "
                 >
-                    <div
-                        className={` font-bold 2xs:text-3xl sm:text-5xl md:text-3xl lg:text-5xl xl:text-6xl`}
-                    >
-                        Artisanal Coffee Tasting
-                    </div>
-                    <div className="font-bold">
-                        <span className="xs:block sm:inline">Every Saturday 2:00PM</span>
-                        <span className="2xs:float-left sm:float-right md:float-left lg:float-right">
-                            Entry Price ₱ 1200
-                        </span>
-                    </div>
-                    <div className="mt-16 grid grid-cols-12 gap-5">
-                        <div className="2xs:col-span-12 xl:col-span-6">
-                            Embark on a journey of discovery with our Artisanal Coffee Tasting
-                            Experience. Delve into the world of coffee craftsmanship as our
-                            expert baristas guide you through a sensory exploration of our
-                            finest blends. From the rich and robust notes of our house blend
-                            to the delicate nuances of single-origin varieties, each cup tells
-                            a story of origin, flavor profile, and brewing technique.
-                        </div>
-                        <div className="2xs:col-span-12 xl:col-span-6">
-                            Learn about the art of coffee roasting. brewing methods, and the
-                            importance of ethical sourcing as you savor each distinct cup.
-                            Accompanied by delectable pairings of artisanal treats, this
-                            interactive and educational event promises to awaken your palate
-                            and deepen your appreciation for the complexities of coffee.
-                            Whether you're a coffee enthusiast or a curious beginner, join us
-                            for an unforgettable journey into the world of artisanal coffee.
-                        </div>
-                    </div>
-                </div>
-            </div> */}
+                    <SwiperSlide>
+                        <Image className="h-auto w-auto" src={Image1} alt="About us" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Image className="h-auto w-auto" src={Image2} alt="About us" />
+                    </SwiperSlide>
+                </Swiper>
+            </div>
         </section>
     )
 }
