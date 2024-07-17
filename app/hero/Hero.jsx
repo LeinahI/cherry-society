@@ -81,7 +81,7 @@ function Hero() {
         <div className="mx-auto 2xs:mt-4 md:mt-4 lg:mt-5 xl:mt-5 relative">
             <motion.div
                 initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
             >
                 {/* Lunchbox */}
@@ -94,8 +94,8 @@ function Hero() {
                 {/* Person 1 */}
                 <motion.div
                     initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 1 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 1 }}
                     className="flex justify-center">
                     <Image
                         src={Person1}
@@ -116,8 +116,8 @@ function Hero() {
                 {/* Person 2 */}
                 <motion.div
                     initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 2 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 1.5 }}
                     className="flex justify-center">
                     <Image
                         src={Person2}
@@ -138,8 +138,8 @@ function Hero() {
                 {/* Person 3 */}
                 <motion.div
                     initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 3 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 2 }}
                     className="flex justify-center">
                     <Image
                         src={Person3}
@@ -160,8 +160,8 @@ function Hero() {
                 {/* Person 4 */}
                 <motion.div
                     initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 4 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 2.5 }}
                     className="flex justify-center">
                     <Image
                         src={Person4}
@@ -182,8 +182,8 @@ function Hero() {
                 {/* Cherry */}
                 <motion.div
                     initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 5 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 3 }}
                     className="flex justify-center">
                     <Image
                         src={Cherry}

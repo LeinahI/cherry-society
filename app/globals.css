@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Typefaces */
+@font-face {
+  font-family: 'Funkhouse';
+  src: local("Funkhouse"),
+  url("../public/assets/fonts/Funkhouse.ttf") format("truetype");
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -30,7 +37,7 @@ body {
 }
 
 .text-primary{
-  color: #b8926b !important;
+  color: #CE6397 !important;
 }
 
 .text-secondary{

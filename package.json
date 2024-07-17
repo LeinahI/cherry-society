@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@designbycode/tailwindcss-text-stroke": "^1.2.1",
     "framer-motion": "^11.3.4",
     "next": "14.2.5",
     "react": "^18",

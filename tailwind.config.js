@@ -12,6 +12,9 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        funkhouse: ["Funkhouse"],
+      },
     },
     screens: {
       "2xs": "320px",
@@ -32,7 +35,10 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [
+    require("daisyui"),
+    require("@designbycode/tailwindcss-text-stroke"),
+  ],
   daisyui: {
     themes: [],
   },
