@@ -13,7 +13,7 @@ import 'swiper/css';
 
 function About() {
     return (
-        <section className='grid grid-cols-12 mt-0'>
+        <section className='grid grid-cols-12 2xs:mt-0 2xl:mt-20'>
             <div className="2xs:order-2 lg:order-1 2xs:col-span-12 lg:col-span-6 2xs:mt-10 xl:mt-20">
                 <div
                     className="text-primary 2xs:mx-10 sm:mx-8"

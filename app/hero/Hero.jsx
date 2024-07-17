@@ -78,7 +78,7 @@ function Hero() {
 
 
     return (
-        <div className="mx-auto 2xs:mt-4 md:mt-4 lg:mt-5 xl:mt-5 relative">
+        <section className="mx-auto 2xs:mt-4 md:mt-10 relative">
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -202,7 +202,7 @@ function Hero() {
                     />
                 </motion.div>
             </motion.div>
-        </div>
+        </section>
     )
 }
 
